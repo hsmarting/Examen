@@ -1,0 +1,36 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">No.</th>        
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Dirección</th>
+            <th scope="col">Email</th>
+            <th scope="col">Telefono</th>
+            <th></th> 
+            <th></th>           
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of listEmployee">
+            <td>{{item.idEmployee}}</td>
+            <td>{{item.firstName}}</td>
+            <td>{{item.lastName}}</td>
+            <td>{{item.address}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.phoneNumber}}</td>
+            <td>
+                <button class="btn btn-info" (click)="onGetEmployee(item.idEmployee)">
+                    Editar
+                </button>
+            </td>  
+            <td>
+                <button class="btn btn-danger" (click)="onDeleteEmployee(item.idEmployee)">
+                    Eliminar 
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
